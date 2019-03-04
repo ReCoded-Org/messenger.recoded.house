@@ -1,11 +1,25 @@
 <?
 
-// table for admins
-admin_id
-admin_username
-admin_hash
-timestamp
-
+// Table for user sessions
+$sessions_table = [
+  "session_id"  => "VARCHAR(50)",
+	"session_token"	=> "VARCHAR(300)",
+  "session_hash"    => "VARCHAR(100)",
+  "session_secret"  => "VARCHAR(100)",
+	"session_opened"	=> "VARCHAR(30)",
+	"facebook_id"	=> "VARCHAR(100)",
+	"facebook_name"	=> "VARCHAR(100)",
+	"timestamp"	=>	"VARCHAR(100)",
+	];
+	
+// Table for messenger users
+$messenger_users_table [
+	"facebook_id" => "VARCHAR(100)",
+	"facebook_name"		=> "VARCHAR(100)",
+	
+	
+	
+	
 // table for users
 user_id VARCHAR
 name VARCHAR
@@ -32,7 +46,7 @@ json VARCHAR
 timestamp
   
   
-// Log in
+// Log in ... if they have admin access to the page then they can go ahead. If not then no.
   
 // Admin interface
   // View users
